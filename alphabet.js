@@ -244,7 +244,6 @@ function spellFunction (letter) {
     switch(letter) {
         case "A":
             aSound.play();
-            aSound.stop();
             break;
         case "B":
             bSound.play();
