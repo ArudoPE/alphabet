@@ -1,0 +1,118 @@
+/*RESET*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+/*ANIMATIONS*/
+@keyframes bgcolor {
+    0% {
+        background-color: #2e2e2e;
+    }
+    50% {
+        background-color: #1f1f1f;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+/*BACKGROUND ANIMATION*/
+body {
+    font-family: 'Lato', sans-serif;
+    /*ANIMATION*/
+    -webkit-animation: bgcolor 10s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    color: black;
+    color: white;
+}
+/*SHARED*/
+:root {
+    --header-link-font-size: 1.6rem;
+    --main-title-h1-font-size: 2rem;
+    --main-section-explanation-text: 1.6rem;
+    --tile-letter-font-size: 4rem;
+    --footer-text-font-size: 1.5rem;
+}
+.center-text {
+    text-align: center;
+}
+.letter-tile {
+    width: 7rem;
+    height: 7rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(140, 140, 140);
+    padding-top: 10px;
+}
+.letter-tile span {
+    font-size: var(--tile-letter-font-size);
+}
+.main-explanation-text {
+    font-size: var(--main-section-explanation-text);
+    background-color: rgb(255, 255, 255,0.9);
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+/*HEADER*/
+.header-logo{
+    float: left;
+}
+.header-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 15px;
+}
+.header-nav li {
+    list-style: none;
+}
+.header-nav-link {
+    text-decoration: underline;
+    font-size: var(--header-link-font-size);
+    color: white;
+    font-weight: bold;
+}
+/*MAIN*/
+.main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main-title-h1 {
+    font-size: var(--main-title-h1-font-size);
+}
+.alphabet-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+/*FOOTER*/
+.footer p {
+    margin-top: 10px;
+    font-size: var(--footer-text-font-size);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA*/
