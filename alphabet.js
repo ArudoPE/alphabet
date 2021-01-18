@@ -134,12 +134,117 @@ letterX.addEventListener("click",playSound);
 letterY.addEventListener("click",playSound);
 letterZ.addEventListener("click",playSound);
 
+//SPELL IT BUTTON CLIC AND TOUCH
+var spellButton = document.getElementById("submitButton");
+spellButton.addEventListener("click", spellSound);
+
+//SPELL SOUND FUNCTION
+const timer = ms => new Promise(res => setTimeout(res, ms))
+
+async function spellSound(event){
+    var word = document.getElementById("inputText").value;
+    word = word.toUpperCase();
+    var wlength= word.length;
+    var i;
+    for(i=0;i<wlength;i++) {
+        spellFunction(word.charAt(i));
+        console.log(word.charAt(i));
+        await timer(1000);
+    }
+}
+
 //MAIN "PLAYSOUND" FUNCTION
 function playSound (event) {
-    // aSound.play();
     switch(event.target.innerText) {
         case "A":
             aSound.play();
+            break;
+        case "B":
+            bSound.play();
+            break;
+        case "C":
+            cSound.play();
+            break;
+        case "D":
+            dSound.play();
+            break;
+        case "E":
+            eSound.play();
+            break;
+        case "F":
+            fSound.play();
+            break;
+        case "G":
+            gSound.play();
+            break;
+        case "H":
+            hSound.play();
+            break;
+        case "I":
+            iSound.play();
+            break;
+        case "J":
+            jSound.play();
+            break;
+        case "K":
+            kSound.play();
+            break;
+        case "L":
+            lSound.play();
+            break;
+        case "M":
+            mSound.play();
+            break;
+        case "N":
+            nSound.play();
+            break;
+        case "O":
+            oSound.play();
+            break;
+        case "P":
+            pSound.play();
+            break;
+        case "Q":
+            qSound.play();
+            break;
+        case "R":
+            rSound.play();
+            break;
+        case "S":
+            sSound.play();
+            break;
+        case "T":
+            tSound.play();
+            break;
+        case "U":
+            uSound.play();
+            break;
+        case "V":
+            vSound.play();
+            break;
+        case "W":
+            wSound.play();
+            break;
+        case "X":
+            xSound.play();
+            break;
+        case "Y":
+            ySound.play();
+            break;
+        case "Z":
+            zSound.play();
+            break;
+        default:
+            console.log("default case");
+            break;
+    }
+}
+//SPELL "PLAYSOUND" FUNCTION
+function spellFunction (letter) {
+    switch(letter) {
+        case "A":
+            aSound.play();
+            aSound.stop();
             break;
         case "B":
             bSound.play();
