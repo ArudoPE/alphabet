@@ -4,50 +4,39 @@
     margin: 0;
     padding: 0;
 }
-html {
+/* html {
     font-size: 62.5%;
-}
-/*ANIMATIONS*/
-@keyframes bgcolor {
-    0% {
-        background-color: #2e2e2e;
-    }
-    50% {
-        background-color: #1f1f1f;
-    }
-    100% {
-        background-color: #000000;
-    }
-}
-/*BACKGROUND ANIMATION*/
+} */
+
 body {
     font-family: 'Lato', sans-serif;
-    /*ANIMATION*/
-    -webkit-animation: bgcolor 10s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--white-color);
 }
 /*SHARED*/
 :root {
     --header-link-font-size: 1.6rem;
-    --main-title-h1-font-size: 2rem;
-    --main-section-explanation-text: 1.6rem;
-    --tile-letter-font-size: 4rem;
+    --main-title-h1-font-size: 28px;
+    --section-explanation-text: 15px;
+    --tile-letter-font-size: 20px;
     --footer-text-font-size: 1.5rem;
+    /*COLORS*/
+    --bg-color: rgb(17, 17, 17);
+    --primary-color: rgb(112, 112, 252);
+    --secondary-color: rgb(191, 26, 154);
+    --white-color: rgb(243, 243, 243);
+    --accent-color: rgba(113, 55, 227, 0.902);
+
 }
 .center-text {
     text-align: center;
 }
 .letter-tile {
-    width: 7rem;
-    height: 7rem;
+    width: 60px;
     border: 2px solid white;
     border-radius: 10px;
-    background-color: rgb(140, 140, 140);
-    padding-top: 10px;
+    background-color: var(--secondary-color);
+    padding: 10px;
 }
 .letter-tile span {
     font-size: var(--tile-letter-font-size);
@@ -57,37 +46,21 @@ body {
     justify-content: center;
 }
 .span-text {
-    color: rgb(112, 112, 252);
+    color: var(--primary-color);
 }
 .main-explanation-text{
-    font-size: var(--main-section-explanation-text);
-    background-color: rgb(255, 255, 255,0.9);
-    color: black;
+    font-size: var(--section-explanation-text);
+    background-color: var(--accent-color);
     font-weight: bold;
     text-align: center;
+    padding: 7px 5px;
+    border-radius: 8px;
 }
 /*HEADER*/
-.header-logo{
-    position: absolute;
-    left: 5px;
-    top: 5px;
+.header {
+    padding: 10px 0;
 }
-.header-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    column-gap: 15px;
-}
-.header-nav li {
-    list-style: none;
-}
-.header-nav-link {
-    text-decoration: underline;
-    font-size: var(--header-link-font-size);
-    color: white;
-    font-weight: bold;
-}
+
 /*MAIN*/
 .main {
     margin-left: 10px;
@@ -100,8 +73,7 @@ body {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 10px;
-    row-gap: 10px;
+    gap: 10px;
     justify-content: center;
     align-content: center;
 }
@@ -110,34 +82,56 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 5px;
+    gap: 10px;
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 8px;
+}
+.input-container label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-container label input {
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
 }
 .input-container span {
-    font-size: var(--main-section-explanation-text);
+    font-size: var(--section-explanation-text);
+    font-weight: bold;
 }
 .submit-button {
     padding: 10px;
-    width: 100px;
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: var(--main-section-explanation-text);
-    background-color: rgb(255, 0, 191);
+    background-color: var(--secondary-color);
     border: 2px solid white;
-    color: white;
-    text-align: center;
+    color: var(--white-color);
 }
 .input-text {
     padding: 3px;
 }
-.speller-section,
-.alphabet-section {
-    margin-top: 20px;
+
+.speller-section h2 {
+    padding: 10px 0;
 }
 /*FOOTER*/
 .footer p {
-    margin-top: 10px;
-    font-size: var(--footer-text-font-size);
+    padding: 15px;
 }
+
+/*ANIMATIONS*/
+.main .alphabet-container .letter-tile:hover,
+.main .alphabet-container .letter-tile:active {
+    background-color: rgb(218, 39, 179);
+    transition-duration: 0.2s;
+}
+
 /*MEDIA*/
 @media(min-width:800px) {
     :root {
@@ -155,8 +149,7 @@ body {
     }
     .alphabet-container {
         margin-top: 15px;
-        column-gap: 15px;
-        row-gap: 15px;
+        gap: 15px;
     }
     .input-container {
         margin-top: 15px;
